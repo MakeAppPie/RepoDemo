@@ -25,7 +25,8 @@ class GameScene: SKScene {
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        let h = w * 2.0
+        self.spinnyNode = SKShapeNode.init(ellipseOf: CGSize.init(width: w, height: h))
         
         if let spinnyNode = self.spinnyNode {
             spinnyNode.lineWidth = 2.5
